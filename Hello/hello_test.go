@@ -1,10 +1,12 @@
-package main
+package hello
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestHello(t *testing.T) {
 	t.Run("Saying hello to people", func(t *testing.T) {
-		got := hello("FBI", "")
+		got := Hello("FBI", "")
 		want := "Hello, FBI"
 
 		assertCorrectMessage(t, got, want)
@@ -12,20 +14,20 @@ func TestHello(t *testing.T) {
 	})
 
 	t.Run("When the name is empty", func(t *testing.T) {
-		got := hello("", "")
+		got := Hello("", "")
 		want := "Hello, World"
 
 		assertCorrectMessage(t, got, want)
 	})
 
 	t.Run("In Spanish", func(t *testing.T) {
-		got := hello("Elodie", "Spanish")
+		got := Hello("Elodie", "Spanish")
 		want := "Hola, Elodie"
 		assertCorrectMessage(t, got, want)
 	})
 
 	t.Run("In French", func(t *testing.T) {
-		got := hello("Elodie", "French")
+		got := Hello("Elodie", "French")
 		want := "Bonjour, Elodie"
 		assertCorrectMessage(t, got, want)
 	})

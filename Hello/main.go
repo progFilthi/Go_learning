@@ -1,4 +1,4 @@
-package main
+package hello
 
 import "fmt"
 
@@ -8,7 +8,7 @@ const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const frenchHelloPrefix = "Bonjour, "
 
-func hello(name string, language string) string {
+func Hello(name string, language string) string {
 
 	if name == "" {
 		name = "World"
@@ -26,7 +26,7 @@ func hello(name string, language string) string {
 	return prefix + name
 }
 
-func main() {
+func mainHello() {
 
-	fmt.Println(hello("FBI", ""))
+	fmt.Println(Hello("FBI", ""))
 }
