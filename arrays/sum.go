@@ -1,25 +1,20 @@
 package arrays
 
-func Sum(numbers []int) int {
-
-	//sum := 0
-	//
-	//n := len(numbers)
-	//
-	//for i := 0; i < n; i++ {
-	//
-	//	sum += numbers[i]
-	//
-	//}
-	//
-	//return sum
+func Sum(nums []int) int {
 
 	sum := 0
 
-	for _, number := range numbers {
-		sum += number
+	//n := len(nums)
+	//
+	//for i := 0; i < n; i++ {
+	//	//sum = sum + nums[i]
+	//	sum += nums[i]
+	//
+	//}
+
+	for _, num := range nums {
+		sum += num
 	}
 
 	return sum
-
 }
